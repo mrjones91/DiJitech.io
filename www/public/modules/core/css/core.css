@@ -14,7 +14,25 @@
 	border-color: #78FA89;
 }
 
+head
+{
+	background-color: #EEEEFF;
+}
 body 
 {
-	background-color: #EEEEEE;
+	background-color: #FFFFFF;
+	/*	#99CCFF
+	background-image: url('/modules/core/img/content/milky-way.jpg');*/
+}
+
+.main {
+	width: 100%;
+	/*background-color: #0000FF;*/
+	font-size: 50;
+	color: #EEEEEE;
+}
+
+h2
+{
+	color: #000000;
 }

@@ -6,6 +6,8 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 
+		//Things for home page
+
 		$scope.alerts = [
 			{
 				icon: 'glyphicon-user',

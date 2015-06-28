@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/dijitechio-test',
+	db: 'mongodb://admin:testadmin@dogen.mongohq.com:10028/dijitechio',
 	port: 3001,
 	app: {
 		title: 'dijitech.io - Test Environment'

@@ -68,7 +68,7 @@ module.exports = function(grunt) {
 		uglify: {
 			production: {
 				options: {
-					mangle: false
+					mangle: true
 				},
 				files: {
 					'public/dist/application.min.js': 'public/dist/application.js'
@@ -126,6 +126,20 @@ module.exports = function(grunt) {
 			},
 			secure: {
 				NODE_ENV: 'secure'
+			},
+			development: {
+				NODE_ENV: 'development'
+			},
+			production: {
+				NODE_ENV: 'production'
+			}
+		},
+		heroku: {
+			production: {
+				NODE_ENV: 'production'
+			},
+			development: {
+				NODE_ENV: 'production'
 			}
 		},
 		mochaTest: {
@@ -170,8 +184,12 @@ module.exports = function(grunt) {
 	grunt.registerTask('lint', ['jshint', 'csslint']);
 
 	// Build task(s).
-	grunt.registerTask('build', ['lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin']);
+	grunt.registerTask('build', ['env:development', 'lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin']);
 
 	// Test task.
 	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
+
+	//Heroku Deployment
+	grunt.registerTask('prod', ['heroku:production','build']);
+
 };

@@ -1,0 +1,107 @@
+<section data-ng-controller="CustomersController">
+    <div class="page-header">
+        <h1>New Customer</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="row">
+                    <div class="col-sm-6 text-center">
+                        <i class="glyphicon glyphicon-user cust-profile"></i>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="firstname">First Name</label>
+                            
+                            <div class="controls">
+                                <input type="text" data-ng-model="firstName" id="firstname" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="lastname">Last Name</label>
+                            
+                            <div class="controls">
+                                <input type="text" data-ng-model="lastName" id="lastname" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="city">City</label>
+                            
+                            <div class="controls">
+                                <input type="text" data-ng-model="city" id="city" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="country">Country</label>
+                            
+                            <div class="controls">
+                                <input type="text" data-ng-model="country" id="country" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="phone">Phone</label>
+                            
+                            <div class="controls">
+                                <input type="text" data-ng-model="phone" id="phone" class="form-control">
+                            </div>
+                        </div>
+                        
+                    </div>
+                        
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <!--div class="form-group" ng-repeat="customerField in customerFields">
+                            <label class="control-label" for="customerField.field">{{customerField.fieldName}}</label>
+                            
+                            <div class="controls">
+                                <input type="text" data-ng-model="customerField.fieldValue" id="customerField.field" class="form-control text-muted">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="referred"></label>
+                            
+                            <div class="controls">
+                                <input type="checkbox" data-ng-model="referred" id="referred" class="form-control text-muted">
+                            </div>
+                        </div-->
+                        
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="referred">Referred</label>
+                            
+                            <div class="controls">
+                                <input type="checkbox" data-ng-model="referred" id="referred" class="form-control checkbox-left">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label" for="industry">Industry</label>
+                            
+                            <div class="controls">
+                                <input type="text" data-ng-model="channel" id="channel" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-default">
+                        </div>
+                    </div>
+                </div>
+                
+                
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
